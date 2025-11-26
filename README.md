@@ -168,7 +168,110 @@ Spread Betting
 
 
 
+<!--------------------------------------------------------------------------------- Knowledge-->
+<br><br>
 
+## Knowledge
+<table class="tbl1"><tbody>
+<tr>
+<td align="center" id="header">عرض پایه</td>
+<td align="center" id="header">عرض پشتیبان</td>
+<td align="center" id="header">جفت عرض</td>
+</tr>
+<tr>
+<td align="center">EUR</td>
+<td align="center">USD</td>
+<td align="center">EURUSD</td>
+</tr>
+</tbody></table>
+
+<table class="tbl1"><tbody>
+<tr>
+<td align="center" rowspan="6">EUR</td>
+<td align="center" rowspan="6">USD</td>
+<td align="center" rowspan="6">EURUSD</td>
+<td align="center">1.4</td>
+<td align="center">اگه 1 یورو بدی 1.4 دلار می گیری</td>
+</tr>
+<tr>
+<td align="center">Up</td>
+<td align="center">افزایش قیمت یورو نسبت به دلار<br>کاهش قیمت دلار نسبت به یورو</td>
+</tr>
+<tr>
+<td align="center">Down</td>
+<td align="center">کاهش قیمت یورو نسبت به دلار<br>افزایش قیمت دلار نسبت به یورو</td>
+</tr>
+<tr>
+<td align="center">Buy</td>
+<td align="center">Convert USD To EUR</td>
+</tr>
+<tr>
+<td align="center">Sell</td>
+<td align="center">Convert EUR To USD</td>
+</tr>
+</tbody></table>
+
+<table class="tbl1"><tbody>
+<tr><td align="center">Leverage</td><td align="center">چند برابر پول واقعی امکان خرید می دهد</td></tr>
+<tr><td align="center">Balance</td><td align="center">مقدار موجودی بدون در نظر گرفتن معامله های در حال انجام</td></tr>
+<tr><td align="center">Equity</td><td align="center">مقدار موجودی با در نظر گرفتن معامله های در حال انجام</td></tr>
+<tr><td align="center">Margin</td><td align="center">مقدار پولی که در معاملات درگیر هست</td></tr>
+<tr><td align="center">Free margin</td><td align="center">باقیمانده مقدار پولی که در معاملات درگیر هست</td></tr>
+<tr><td align="center">Margin level</td><td align="center">Equity / Margin</td></tr>
+<tr><td align="center">Pips</td><td align="center">واحد اندازه گیری برای بیان تغغیرات ارزش بین دو ارز گفته می شود.</td></tr>
+<tr><td align="center">Market sentiment</td><td align="center">تمایل بازار</td></tr>
+<tr><td align="center">Pip</td><td align="center">کوچکترین واحد تغییر قیمت</td></tr>
+<tr><td align="center">Spread</td><td align="center">اختلاف قیمت بین خرید و فروش</td></tr>
+<tr><td align="center">Swap</td><td align="center"></td></tr>
+</tbody></table>
+
+
+
+<!--------------------------------------------------------------------------------- Example-->
+<br><br>
+
+## Example
+
+```
+Lot = 100.000 Dollar
+Leverage = 100
+Base Currency = GBP
+Balance = 1000
+Asset = EURNZD
+Action = Buy
+Volume = 1
+```
+
+<div class="" align="right" dir="rtl">
+<div class="md4"><span class="blue">1</span> : <span>این معامله میگوید به مقدار یک لات یعنی همان 100.000 دلار, عرض NZD رابه عرض EUR تبدیل کن </span></div>
+<div class="md4"><span class="blue">2</span> : <span>با توجه به Leverage=100 انگار شما 100.000 GBP اعتبار دارید</span></div>
+<div class="md4"><span class="blue">3</span> : <span>معادل 100.000 دلار با توجه به نرخ تبدیل GBP, GBPUSD را به USD تبدیل میکنیم (الان 100.000 USD داریم)</span></div>
+<div class="md4"><span class="blue">4</span> : <span>100.000 دلار را با توجه به نرخ تبدیل USDNZD, به NZD تبدیل میکنیم (الان NZD داریم)</span></div>
+<div class="md4"><span class="blue">5</span> : <span> NZD ها را با توجه به نرخ تبدیل EURNZD, به EUR تبدیل میکنیم (الان EUR داریم)</span></div>
+<div class="md4"><span class="blue">6</span> : <span> الان پوزیشن باز شده است و فرض کنید نرخ تبدیل معامله ی ما یعنی EURNZD افزایش داشته است و میخواهیم پوزیشن را ببندیم</span></div>
+<div class="md4"><span class="blue">7</span> : <span>با توجه به نرخ تبدیل EURNZD, اون مقدار EUR که داریم رو به NZD تبدیل میکنیم (الان NZD داریم)</span></div>
+<div class="md4"><span class="blue">8</span> : <span>با توجه به نرخ تبدیل GBPNZD, اون مقدار NZD که داریم رو به GBP تبدیل میکنیم (الان GBP داریم)</span></div>
+<div class="md4"><span class="blue">9</span> : <span>مقدار GBP بدست آمده را به Balance اضافه میکنیم</span></div>
+</div>
+
+
+
+<!--------------------------------------------------------------------------------- Order-->
+<br><br>
+
+## Order
+
+<table class="tbl1"><tbody>
+<tr><td align="center" colspan="4"  align="center" id="header" bgcolor="D1ECCF">Buy</td></tr>
+<tr><td align="center">Buy Limit</td><td align="center">اردر پایین قیمت فعلی</td><td align="center">بسمت ضرر</td><td align="center">خرید</td></tr>
+<tr><td align="center">Buy Stop</td><td align="center">اردر بالای قیمت فعلی</td><td align="center">بسمت سود</td><td align="center">خرید</td></tr>
+</tbody></table>
+<table class="tbl1"><tbody>
+<tr><td colspan="4"  align="center" id="header" bgcolor="D1ECCF">Sell</td></tr>
+<tr><td align="center">Sell Limit</td><td align="center">اردر بالای قیمت فعلی</td><td align="center">بسمت ضرر</td><td align="center">فروش</td></tr>
+<tr><td align="center">Sell Stop</td><td align="center">اردر پایین قیمت فعلی</td><td align="center">بسمت سود</td><td align="center">فروش</td></tr>
+</tbody></table>
+<div class="md4"></div>
 
 
 
